@@ -1,7 +1,14 @@
 img {
-  object-fit: cover;
   width: 90%;
-  height: 150px;
+  height: 200px;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+}
+header .header__titre {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
