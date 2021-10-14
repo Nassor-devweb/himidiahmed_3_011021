@@ -1,7 +1,23 @@
+@font-face {
+  font-family: "shrikhand";
+  src: url("../../fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../fonts/Roboto/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
 body {
   margin: 0px;
   position: relative;
   box-sizing: border-box;
+  font-family: "roboto";
 }
 
 img {
@@ -24,6 +40,8 @@ header .header__titre {
 }
 header .header__titre h1 {
   margin: 23px 0px 0px 0px;
+  font-family: "shrikhand";
+  font-size: 22px;
 }
 header .header__localisation {
   background-color: #eaeaea;
@@ -35,6 +53,7 @@ header .header__localisation {
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  font-size: 12px;
 }
 header .header__nos_resto {
   background-color: #f6f6f6;
@@ -46,12 +65,17 @@ header .header__nos_resto {
   align-content: flex-start;
 }
 header .header__nos_resto h2 {
+  text-align: center;
   margin-top: 44px;
   margin-bottom: 0px;
   width: 61%;
   height: 47px;
+  font-size: 18px;
+  font-weight: bold;
 }
 header .header__nos_resto p {
+  font-size: 13px;
+  text-align: center;
   width: 81%;
   height: 32px;
   margin-top: 20px;
@@ -65,6 +89,8 @@ header .header__nos_resto .button_explorer {
   border-radius: 25px;
 }
 header .header__nos_resto .button_explorer button {
+  font-size: 12px;
+  font-weight: bold;
   border-radius: 25px;
   color: white;
   background-color: #9356DC;
@@ -98,6 +124,8 @@ header .header__nos_resto .button_explorer button {
   margin-top: 26px;
 }
 .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button button {
+  font-size: 12px;
+  font-weight: bold;
   border-radius: 20px;
   background-color: #f6f6f6;
   height: 100%;
@@ -172,10 +200,13 @@ header .header__nos_resto .button_explorer button {
   height: 132px;
 }
 .bas-page .bas-page__block .bas-page__block__titre {
+  font-size: 15px;
+  font-family: "shrikhand";
   margin-top: 0px;
   padding: 0px;
 }
 .bas-page .bas-page__block .bas-page__block__liste {
+  font-size: 12px;
   margin: 0px;
   padding: 0px;
 }
