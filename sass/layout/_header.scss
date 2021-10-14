@@ -2,19 +2,18 @@ header {
     width: 100%;
     @include flex-row-wrap;
     height: 400px;
-    position: relative;
     justify-content: space-around;
-
     .header__titre{
         width: $width_100 ;
         height: 63px;
         @include flex-row-wrap;
         @include justify-content-spa;
+        h1{
+            margin:23px 0px 0px 0px;
+        }
     }
     .header__localisation{
-        position: absolute;
         background-color: $header-localisation-color ;
-        top: 63px;
         width: $width_100 ;
         height: 50px;
         @include margin-top-bottom_0 ;
@@ -24,33 +23,31 @@ header {
     }
     .header__nos_resto{
         background-color: $tertiaire-color;
-        position: absolute;
         height: 287px;
-        top: 113px ;
         width: 100%;
         @include flex-row-wrap;
         @include justify-content-spa;
+        align-content: flex-start;
         h2{
-            position: absolute;
-            top: 44px;
+            margin-top: 44px;
+            margin-bottom: 0px;
             width: 61%;
-            @include margin-top-bottom_0 ;
+            height: 47px;
         }
         p{
             width: 81%;
-            position: absolute;
-            top: 111px;
-            @include margin-top-bottom_0 ;
+            height: 32px;
+            margin-top: 20px;
+            margin-bottom: 0px;
             @include justify-content-spa;
-            
-            
         }
         .button_explorer{
-            position: absolute;
-            top: 180px;
             height: 50px;
             width: 58%;
+            margin-top: 31px;
+            border-radius: 25px;
             button{
+                border-radius: 25px;
                 color: white;
                 background-color: $primary-color;
                 width: 100%;

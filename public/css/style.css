@@ -13,7 +13,6 @@ header {
   display: flex;
   flex-wrap: wrap;
   height: 400px;
-  position: relative;
   justify-content: space-around;
 }
 header .header__titre {
@@ -23,10 +22,11 @@ header .header__titre {
   flex-wrap: wrap;
   justify-content: space-around;
 }
+header .header__titre h1 {
+  margin: 23px 0px 0px 0px;
+}
 header .header__localisation {
-  position: absolute;
   background-color: #eaeaea;
-  top: 63px;
   width: 100%;
   height: 50px;
   margin-top: 0px;
@@ -38,36 +38,34 @@ header .header__localisation {
 }
 header .header__nos_resto {
   background-color: #f6f6f6;
-  position: absolute;
   height: 287px;
-  top: 113px;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-content: flex-start;
 }
 header .header__nos_resto h2 {
-  position: absolute;
-  top: 44px;
-  width: 61%;
-  margin-top: 0px;
+  margin-top: 44px;
   margin-bottom: 0px;
+  width: 61%;
+  height: 47px;
 }
 header .header__nos_resto p {
   width: 81%;
-  position: absolute;
-  top: 111px;
-  margin-top: 0px;
+  height: 32px;
+  margin-top: 20px;
   margin-bottom: 0px;
   justify-content: space-around;
 }
 header .header__nos_resto .button_explorer {
-  position: absolute;
-  top: 180px;
   height: 50px;
   width: 58%;
+  margin-top: 31px;
+  border-radius: 25px;
 }
 header .header__nos_resto .button_explorer button {
+  border-radius: 25px;
   color: white;
   background-color: #9356DC;
   width: 100%;
@@ -78,7 +76,6 @@ header .header__nos_resto .button_explorer button {
   display: flex;
   justify-content: space-around;
   height: 441px;
-  position: relative;
 }
 .menu-navigation .menu-navigation__contenair {
   width: 85%;
@@ -87,8 +84,7 @@ header .header__nos_resto .button_explorer button {
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: flex-start;
-  position: absolute;
-  top: 53px;
+  margin-top: 53px;
 }
 .menu-navigation .menu-navigation__contenair h3 {
   height: 17px;
@@ -102,6 +98,7 @@ header .header__nos_resto .button_explorer button {
   margin-top: 26px;
 }
 .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button button {
+  border-radius: 20px;
   background-color: #f6f6f6;
   height: 100%;
   width: 100%;
@@ -110,8 +107,6 @@ header .header__nos_resto .button_explorer button {
 .bloc-section {
   width: 100%;
   height: 1226px;
-  position: absolute;
-  top: 841px;
   display: flex;
   justify-content: space-around;
   background-color: #f6f6f6;
@@ -124,6 +119,7 @@ header .header__nos_resto .button_explorer button {
   height: 250px;
   margin-bottom: 18px;
   border-radius: 20px;
+  box-shadow: 5px 5px 5px rgba(28, 26, 25, 0.1);
 }
 .bloc-section .bloc-section__inter .bloc-section__inter__resto a {
   width: 100%;
@@ -150,27 +146,42 @@ header .header__nos_resto .button_explorer button {
   bottom: 0px;
   color: black;
 }
+.bloc-section .bloc-section__inter .bloc-section__inter__resto a .Presentation_resto h4 {
+  margin-top: 20px;
+  margin-left: 14px;
+  margin-bottom: 0px;
+}
+.bloc-section .bloc-section__inter .bloc-section__inter__resto a .Presentation_resto p {
+  margin-top: 11px;
+  margin-left: 14px;
+  margin-bottom: 0px;
+}
 
 .bas-page {
-  position: absolute;
-  top: 2067px;
+  position: relative;
   width: 100%;
   height: 197px;
   background-color: #353535;
   color: white;
 }
 .bas-page .bas-page__block {
-  width: 186px;
+  width: 100%;
+  margin-left: 25px;
   position: absolute;
-  left: 25px;
+  top: 27px;
+  height: 132px;
 }
-.bas-page .bas-page__block .Bas-page__block__liste {
+.bas-page .bas-page__block .bas-page__block__titre {
+  margin-top: 0px;
+  padding: 0px;
+}
+.bas-page .bas-page__block .bas-page__block__liste {
   margin: 0px;
   padding: 0px;
 }
-.bas-page .bas-page__block .Bas-page__block__liste ul {
-  margin: 0px;
-  padding: 0px;
+.bas-page .bas-page__block .bas-page__block__liste li {
+  margin-bottom: 15px;
+  list-style-type: none;
 }
 
 /*# sourceMappingURL=style.css.map */
