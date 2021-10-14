@@ -2,3 +2,15 @@
     display: flex;
     flex-wrap: wrap;
 }
+@mixin flex-column-wrap {
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+}
+@mixin  justify-content-spa {
+    justify-content: space-around;
+}
+@mixin margin-top-bottom_0 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}

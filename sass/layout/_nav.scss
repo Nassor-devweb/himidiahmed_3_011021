@@ -1,0 +1,29 @@
+.menu-navigation{
+    display: flex;
+    @include justify-content-spa;
+    height: 441px;
+    position: relative;
+    .menu-navigation__contenair{
+        width: 85%;
+        @include flex-column-wrap;
+        @include justify-content-spa;
+        align-content: flex-start;
+        position: absolute;
+        top: 53px;
+        h3{
+            height: 17px;
+            @include margin-top-bottom_0 ;
+            width: 46%;
+        }
+        .menu-navigation__contenair__button{
+            height: 72px;
+            width: 100%;
+            margin-top: 26px;
+            button{
+                background-color: $tertiaire-color;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }  
+}

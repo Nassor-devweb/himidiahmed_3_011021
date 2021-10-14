@@ -1,0 +1,23 @@
+.bas-page{
+    position: absolute;
+    top: 2067px;
+    width: 100%;
+    height: 197px;
+    background-color: $footer-background-color;
+    color: white;
+    .bas-page__block{
+        width: 186px;
+        position: absolute;
+        left: 25px;
+
+        .Bas-page__block__liste{
+            margin: 0px;
+            padding: 0px;
+            ul{
+                margin: 0px;
+                padding: 0px;
+            }
+        }
+    }
+
+}

@@ -1,7 +1,61 @@
 header {
+    width: 100%;
     @include flex-row-wrap;
+    height: 400px;
+    position: relative;
+    justify-content: space-around;
 
     .header__titre{
         width: $width_100 ;
+        height: 63px;
+        @include flex-row-wrap;
+        @include justify-content-spa;
+    }
+    .header__localisation{
+        position: absolute;
+        background-color: $header-localisation-color ;
+        top: 63px;
+        width: $width_100 ;
+        height: 50px;
+        @include margin-top-bottom_0 ;
+        @include flex-row-wrap;
+        @include justify-content-spa;
+        align-items: center;
+    }
+    .header__nos_resto{
+        background-color: $tertiaire-color;
+        position: absolute;
+        height: 287px;
+        top: 113px ;
+        width: 100%;
+        @include flex-row-wrap;
+        @include justify-content-spa;
+        h2{
+            position: absolute;
+            top: 44px;
+            width: 61%;
+            @include margin-top-bottom_0 ;
+        }
+        p{
+            width: 81%;
+            position: absolute;
+            top: 111px;
+            @include margin-top-bottom_0 ;
+            @include justify-content-spa;
+            
+            
+        }
+        .button_explorer{
+            position: absolute;
+            top: 180px;
+            height: 50px;
+            width: 58%;
+            button{
+                color: white;
+                background-color: $primary-color;
+                width: 100%;
+                height: 100%;
+            }
+        }
     }
 }

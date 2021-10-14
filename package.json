@@ -6,6 +6,14 @@
   "scripts": {
     "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nassor-devweb/himidiahmed_3_011021.git"
+  },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Nassor-devweb/himidiahmed_3_011021/issues"
+  },
+  "homepage": "https://github.com/Nassor-devweb/himidiahmed_3_011021#readme"
 }
