@@ -37,6 +37,9 @@ header .header__titre {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom-style: outset;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 header .header__titre h1 {
   margin: 23px 0px 0px 0px;
@@ -51,9 +54,12 @@ header .header__localisation {
   margin-bottom: 0px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   font-size: 12px;
+}
+header .header__localisation .fas {
+  margin-right: 18px;
 }
 header .header__nos_resto {
   background-color: #f6f6f6;
@@ -89,13 +95,15 @@ header .header__nos_resto .button_explorer {
   border-radius: 25px;
 }
 header .header__nos_resto .button_explorer button {
+  box-shadow: 5px 5px 5px rgba(28, 26, 25, 0.2);
   font-size: 12px;
   font-weight: bold;
   border-radius: 25px;
   color: white;
-  background-color: #9356DC;
+  background: linear-gradient(to bottom right, #ff88de, #9b63df);
   width: 100%;
   height: 100%;
+  border: 0px;
 }
 
 .menu-navigation {
@@ -124,12 +132,22 @@ header .header__nos_resto .button_explorer button {
   margin-top: 26px;
 }
 .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button button {
+  border: 0px;
+  box-shadow: 5px 5px 5px rgba(28, 26, 25, 0.2);
   font-size: 12px;
   font-weight: bold;
   border-radius: 20px;
   background-color: #f6f6f6;
   height: 100%;
   width: 100%;
+  position: relative;
+}
+.menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button button .fas {
+  color: #7e7e7e;
+  margin-right: 28px;
+  position: absolute;
+  left: 35px;
+  font-size: 20px;
 }
 
 .bloc-section {
