@@ -5,7 +5,7 @@
     .menu-navigation__contenair{
         width: 85%;
         @include flex-column-wrap;
-        @include justify-content-spa;
+        justify-content: flex-start;
         align-content: flex-start;
         margin-top: 53px;
         h3{
@@ -17,7 +17,9 @@
             height: 72px;
             width: 100%;
             margin-top: 26px;
-            button{
+            .button{
+                display: flex;
+                align-items: center;
                 border: 0px;
                 box-shadow: $shadow-button;
                 font-size: 12px;
@@ -27,11 +29,26 @@
                 height: 100%;
                 width: 100%;
                 position: relative;
+                .menu-navigation__contenair__button__cercle{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: $primary-color;
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                    margin-left: -12.5px;
+                    p{
+                        margin: 0px;
+                        color: white;
+                    }
+                }
+                p{
+                    margin-left: 41px;
+                }
                 .fas{
                     color: #7e7e7e;
-                    margin-right: 28px;
-                    position: absolute;
-                    left: 35px;
+                    margin-left: 35px;
                     font-size: 20px;
                 }
             }

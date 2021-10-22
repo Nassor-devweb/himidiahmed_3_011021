@@ -18,10 +18,27 @@
                 border-radius: 20px;
                 display: inline-block;
                 position: relative;
-                text-decoration: none;
-                
+                text-decoration: none;  
                 position: relative;
+                .presentation_resto_nouveau{
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    position: absolute;
+                    top: 12px;
+                    right: 10px;
+                    z-index: 5;
+                    background-color: #99e2d0;
+                    width: 80px;
+                    height: 28px;
+                    p{
+                        color: #008766;
+                        font-size: 13px;
+                        font-weight: bold;
+                    }
+                }
                 img{
+                    z-index: 1;
                     height: 173px;
                     width: 100%;
                     border-radius: 20px 20px 0px 0px;

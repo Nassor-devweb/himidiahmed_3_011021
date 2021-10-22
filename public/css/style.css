@@ -116,7 +116,7 @@ header .header__nos_resto .button_explorer button {
   flex-direction: column;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-content: flex-start;
   margin-top: 53px;
 }
@@ -131,7 +131,9 @@ header .header__nos_resto .button_explorer button {
   width: 100%;
   margin-top: 26px;
 }
-.menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button button {
+.menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button {
+  display: flex;
+  align-items: center;
   border: 0px;
   box-shadow: 5px 5px 5px rgba(28, 26, 25, 0.2);
   font-size: 12px;
@@ -142,11 +144,26 @@ header .header__nos_resto .button_explorer button {
   width: 100%;
   position: relative;
 }
-.menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button button .fas {
+.menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button .menu-navigation__contenair__button__cercle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #9356DC;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  margin-left: -12.5px;
+}
+.menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button .menu-navigation__contenair__button__cercle p {
+  margin: 0px;
+  color: white;
+}
+.menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button p {
+  margin-left: 41px;
+}
+.menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button .fas {
   color: #7e7e7e;
-  margin-right: 28px;
-  position: absolute;
-  left: 35px;
+  margin-left: 35px;
   font-size: 20px;
 }
 
@@ -176,7 +193,25 @@ header .header__nos_resto .button_explorer button {
   text-decoration: none;
   position: relative;
 }
+.bloc-section .bloc-section__inter .bloc-section__inter__resto a .presentation_resto_nouveau {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  z-index: 5;
+  background-color: #99e2d0;
+  width: 80px;
+  height: 28px;
+}
+.bloc-section .bloc-section__inter .bloc-section__inter__resto a .presentation_resto_nouveau p {
+  color: #008766;
+  font-size: 13px;
+  font-weight: bold;
+}
 .bloc-section .bloc-section__inter .bloc-section__inter__resto a img {
+  z-index: 1;
   height: 173px;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
