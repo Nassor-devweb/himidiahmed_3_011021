@@ -1,4 +1,4 @@
-header {
+.header-accueil {
     width: 100%;
     @include flex-row-wrap;
     height: 400px;
@@ -69,8 +69,45 @@ header {
                 background: linear-gradient(to bottom right,lighten($secondary-color,3%),lighten($primary-color,3%));
                 width: 100%;
                 height: 100%;
-                border:0px
+                border:0px;
             }
+        }
+    }
+}
+/*------------------------------------------Header-menu----------------------------*/
+
+.header-menu{
+    width: 100%;
+    @include flex-row-wrap;
+    height: 321px;
+    justify-content: space-around;
+    .header-menu__titre{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height : 63px;
+        width: 100%;
+        .header-menu__fleche{
+            position: absolute;
+            left: 23px;
+            height: 16px;
+            width: 18px;
+            .fas{
+                color: black;
+            }      
+        }
+        h1{
+            font-family: "shrikhand";
+            font-size: 22px;
+            margin: 0px;
+        }
+    }
+    .header-menu__image{
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
         }
     }
 }

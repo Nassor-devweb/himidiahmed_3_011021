@@ -14,3 +14,20 @@
     margin-top: 0px;
     margin-bottom: 0px;
 }
+@mixin button_explorer {
+    height: 50px;
+    width: 58%;
+    margin-top: 31px;
+    border-radius: 25px;
+}
+@mixin  button {
+    box-shadow: $shadow-button;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 25px;
+    color: white;
+    background: linear-gradient(to bottom right,lighten($secondary-color,3%),lighten($primary-color,3%));
+    width: 100%;
+    height: 100%;
+    border:0px;
+}
