@@ -293,8 +293,8 @@ img {
   flex-wrap: wrap;
   align-content: flex-start;
   background-color: #f6f6f6;
-  position: absolute;
-  top: 283px;
+  position: relative;
+  bottom: 37px;
   border-radius: 50px 50px 0px 0px;
 }
 .bloc-section-menu .bloc-section-menu__titre__h2 {
