@@ -1,6 +1,5 @@
 .bloc-section{
     width: 100%;
-    height: 1226px;
     display: flex;
     @include justify-content-spa;
     background-color: $tertiaire-color;
@@ -78,10 +77,9 @@
 /*-----------------------------Section-menu--------------------------------*/
 
 .bloc-section-menu{
-    padding-left: 14px;
-    padding-right: 12px;
+    padding-left: 3.73%;
+    padding-right: 3.2%;
     width: 93.06%;
-    height: 1161px;
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
@@ -154,9 +152,11 @@
         display: flex;
         justify-content: space-around;
         margin-top: 46px;
+        margin-bottom: 58px;
         .button_explorer{
             height: 50px;
             width: 58%;
+            
             border-radius: 25px; 
             button{
                 @include button;

@@ -18,7 +18,6 @@ body {
   position: relative;
   box-sizing: border-box;
   font-family: "roboto";
-  position: relative;
 }
 
 img {
@@ -29,7 +28,6 @@ img {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 400px;
   justify-content: space-around;
 }
 .header-accueil .header__titre {
@@ -112,7 +110,6 @@ img {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  height: 321px;
   justify-content: space-around;
 }
 .header-menu .header-menu__titre {
@@ -148,7 +145,6 @@ img {
 .menu-navigation {
   display: flex;
   justify-content: space-around;
-  height: 441px;
 }
 .menu-navigation .menu-navigation__contenair {
   width: 85%;
@@ -208,7 +204,6 @@ img {
 
 .bloc-section {
   width: 100%;
-  height: 1226px;
   display: flex;
   justify-content: space-around;
   background-color: #f6f6f6;
@@ -285,10 +280,9 @@ img {
 
 /*-----------------------------Section-menu--------------------------------*/
 .bloc-section-menu {
-  padding-left: 14px;
-  padding-right: 12px;
+  padding-left: 3.73%;
+  padding-right: 3.2%;
   width: 93.06%;
-  height: 1161px;
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -362,6 +356,7 @@ img {
   display: flex;
   justify-content: space-around;
   margin-top: 46px;
+  margin-bottom: 58px;
 }
 .bloc-section-menu .button-menu .button_explorer {
   height: 50px;
@@ -381,24 +376,22 @@ img {
 }
 
 .bas-page {
-  /*position: absolute;
-  top: 1444px;*/
   width: 100%;
   height: 197px;
   background-color: #353535;
   color: white;
 }
 .bas-page .bas-page__block {
-  width: 186px;
   margin-left: 25px;
-  height: 132px;
-  margin-top: 27px;
+  position: relative;
+  top: 27px;
 }
 .bas-page .bas-page__block .bas-page__block__titre {
   font-size: 15px;
   font-family: "shrikhand";
-  margin-top: 0px;
   padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 27px;
 }
 .bas-page .bas-page__block .bas-page__block__liste {
   font-size: 12px;
@@ -406,6 +399,34 @@ img {
   padding: 0px;
 }
 .bas-page .bas-page__block .bas-page__block__liste li {
+  margin-bottom: 15px;
+  list-style-type: none;
+}
+
+.bas-page-menu {
+  width: 100%;
+  height: 197px;
+  background-color: #353535;
+  color: white;
+}
+.bas-page-menu .bas-page-menu__block {
+  margin-left: 25px;
+  position: relative;
+  top: 27px;
+}
+.bas-page-menu .bas-page-menu__block .bas-page-menu__block__titre {
+  font-size: 15px;
+  font-family: "shrikhand";
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 27px;
+}
+.bas-page-menu .bas-page-menu__block .bas-page-menu__block__liste {
+  font-size: 12px;
+  margin: 0px;
+  padding: 0px;
+}
+.bas-page-menu .bas-page-menu__block .bas-page-menu__block__liste li {
   margin-bottom: 15px;
   list-style-type: none;
 }

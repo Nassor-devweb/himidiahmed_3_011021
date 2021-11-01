@@ -1,7 +1,6 @@
 .header-accueil {
     width: 100%;
     @include flex-row-wrap;
-    height: 400px;
     justify-content: space-around;
     .header__titre{
         width: $width_100 ;
@@ -79,7 +78,6 @@
 .header-menu{
     width: 100%;
     @include flex-row-wrap;
-    height: 321px;
     justify-content: space-around;
     .header-menu__titre{
         display: flex;

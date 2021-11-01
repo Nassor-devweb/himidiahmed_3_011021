@@ -1,7 +1,6 @@
 .menu-navigation{
     display: flex;
     @include justify-content-spa;
-    height: 441px;
     .menu-navigation__contenair{
         width: 85%;
         @include flex-column-wrap;
