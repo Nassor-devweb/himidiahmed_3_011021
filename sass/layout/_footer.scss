@@ -3,10 +3,9 @@
     height: 197px;
     background-color: $footer-background-color;
     color: white;
+    padding-top: 27px;
+    padding-left: 25px;
     .bas-page__block{
-        margin-left: 25px;
-        position: relative;
-        top: 27px;
         .bas-page__block__titre{
             font-size: 15px;
             font-family: "shrikhand";
@@ -27,7 +26,8 @@
 
 }
 
-//------------------------footer----------------------------//
+/*------------------------footer----------------------------*/
+
 
 .bas-page-menu{
     width: 100%;
@@ -36,8 +36,9 @@
     color: white;
     .bas-page-menu__block{
         margin-left: 25px;
-        position: relative;
-        top: 27px;
+        /* position: relative;
+        top: 27px; */
+
         .bas-page-menu__block__titre{
             font-size: 15px;
             font-family: "shrikhand";
