@@ -4,8 +4,9 @@
     background-color: $footer-background-color;
     color: white;
     padding-top: 27px;
-    padding-left: 25px;
     .bas-page__block{
+        width: 80%;
+        padding-left: 25px;
         .bas-page__block__titre{
             font-size: 15px;
             font-family: "shrikhand";

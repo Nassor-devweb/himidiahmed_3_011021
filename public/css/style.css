@@ -111,6 +111,7 @@ img {
 .header-accueil .header__nos_resto .button_explorer button:hover {
   transform: scale(1.15);
   background: linear-gradient(to bottom right, #ff98e2, #a36fe1);
+  box-shadow: 10px 10px 10px rgba(28, 26, 25, 0.5);
 }
 
 /*------------------------------------------Header-menu----------------------------*/
@@ -294,10 +295,22 @@ img {
   bottom: 33px;
 }
 .bloc-section .bloc-section__inter .bloc-section__inter__resto a .Presentation_resto .icon-coeur .far {
-  transition: background-color 2000ms;
+  opacity: 1;
+  z-index: 2;
 }
 .bloc-section .bloc-section__inter .bloc-section__inter__resto a .Presentation_resto .icon-coeur .far:hover {
-  background-color: red;
+  opacity: 0;
+  z-index: 1;
+}
+.bloc-section .bloc-section__inter .bloc-section__inter__resto a .Presentation_resto .icon-coeur .fas {
+  color: red;
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 2000ms ease-in-out;
+}
+.bloc-section .bloc-section__inter .bloc-section__inter__resto a .Presentation_resto .icon-coeur .fas:hover {
+  opacity: 1;
+  z-index: 2;
 }
 
 /*-----------------------------Section-menu--------------------------------*/
@@ -409,6 +422,9 @@ img {
   background-color: #353535;
   color: white;
   padding-top: 27px;
+}
+.bas-page .bas-page__block {
+  width: 80%;
   padding-left: 25px;
 }
 .bas-page .bas-page__block .bas-page__block__titre {
