@@ -369,6 +369,22 @@ img {
   box-shadow: 5px 5px 5px rgba(28, 26, 25, 0.1);
   border-radius: 10px;
   margin-bottom: 16px;
+  animation: fadein 8s;
+  /*opacity: 0;
+  transform: translateY(-50);
+  transition: opacity 1s ease-in-out, transform 2s ease-in-out ;
+  &:hover{
+      opacity: 1;
+      transform: translateY(25);
+  }*/
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 .bloc-section-menu .bloc-section-menu__carte .bloc-section-menu__carte__choix h4 {
   width: 218px;
