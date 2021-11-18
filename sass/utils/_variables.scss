@@ -7,3 +7,4 @@ $shadow-resto:5px 5px 5px rgba(28,26,25,0.1);
 $shadow-button:5px 5px 5px rgba(28,26,25,0.2);
 $footer-background-color:#353535;
 $menu-choix-background-color : #ffffff;
+$button-degrade_background: linear-gradient(to bottom right,lighten($secondary-color,3%),lighten($primary-color,3%));

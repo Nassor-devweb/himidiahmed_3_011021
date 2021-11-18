@@ -29,7 +29,7 @@
                     position: absolute;
                     top: 0px;
                     left: 0px;
-                    color: red;
+                    color: #9356DC;
                     opacity: 0;
                     transition: opacity 2000ms ease-in-out;
                     z-index: 5;
@@ -148,7 +148,7 @@
             box-shadow: $shadow-resto;
             border-radius: 10px;
             margin-bottom: 16px;
-            animation: fadein 8s;
+            animation: fadein 3s , trans 5s linear ;
             @keyframes fadein {
                 from {
                     opacity: 0;
@@ -157,6 +157,21 @@
                     opacity: 1;
                 } 
             }
+            @keyframes trans{
+                0% {
+                    transform: translateY(-10px);
+                }
+                35% {
+                    transform: translateY(0px);
+                }
+                70%{
+                    transform: translateY(10px);
+                } 
+                100%{
+                    transform: translateY(0px);
+                }
+            }
+
             /*opacity: 0;
             transform: translateY(-50);
             transition: opacity 1s ease-in-out, transform 2s ease-in-out ;
