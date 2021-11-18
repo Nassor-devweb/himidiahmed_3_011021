@@ -144,32 +144,21 @@
         .bloc-section-menu__carte__choix{
             width: 100%;
             padding: 16px 0px 13px 0px;
+            transform: translateY(-10px);
             background-color: $menu-choix-background-color;
             box-shadow: $shadow-resto;
             border-radius: 10px;
             margin-bottom: 16px;
-            animation: fadein 3s , trans 5s linear ;
+            animation: fadein 3s forwards;
             @keyframes fadein {
                 from {
                     opacity: 0;
+                    transform: translateY(-10px);
                 }
                 to{
                     opacity: 1;
+                    transform: translateY(0);
                 } 
-            }
-            @keyframes trans{
-                0% {
-                    transform: translateY(-10px);
-                }
-                35% {
-                    transform: translateY(0px);
-                }
-                70%{
-                    transform: translateY(10px);
-                } 
-                100%{
-                    transform: translateY(0px);
-                }
             }
 
             /*opacity: 0;
