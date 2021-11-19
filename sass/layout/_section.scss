@@ -150,6 +150,27 @@
             border-radius: 10px;
             margin-bottom: 16px;
             animation: fadein 3s forwards;
+            position: relative;
+            &::hover{
+                &::after{
+                    content: '';
+                    position: absolute;
+                    right: 0px;
+                    top: 0px;
+                    border-radius: 0px 10px 10px 0px;
+                    height: 100%;
+                    width: 17.2%;
+                    background-color: #35dbb2 ;
+                    z-index: 10;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    /*&::after{
+                        content: '<i class="far fa-check-circle"></i>';
+                        z-index: 12;
+                    }*/
+                }
+            }
             @keyframes fadein {
                 from {
                     opacity: 0;
