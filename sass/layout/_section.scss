@@ -141,74 +141,309 @@
             font-size: 12px;
             font-weight: normal;
         }
-        .bloc-section-menu__carte__choix{
-            width: 100%;
-            padding: 16px 0px 13px 0px;
-            transform: translateY(-10px);
-            background-color: $menu-choix-background-color;
-            box-shadow: $shadow-resto;
-            border-radius: 10px;
-            margin-bottom: 16px;
-            animation: fadein 3s forwards;
-            position: relative;
-            &::hover{
-                &::after{
-                    content: '';
+        .entree{
+            .bloc-section-menu__carte__choix{
+                width: 100%;
+                padding: 16px 0px 13px 0px;
+                transform: translateY(-10px);
+                background-color: $menu-choix-background-color;
+                box-shadow: $shadow-resto;
+                border-radius: 10px;
+                margin-bottom: 16px;
+                animation: fadein 2s forwards;
+                position: relative;
+                .bloc-section-menu__carte__choix__prix{
+                    width: 90%;
+                    display: flex;
+                    font-size: 14px;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-left: 12px;
+                    transform-origin: 0% 50%;
+                    h4{
+                        width: 100%;
+                        font-size: 13px;
+                        font-weight: bold;
+                        margin: 0px 0px 10px 0px;
+                    }
+                    p{
+                        margin: 0px;
+                    }
+                    .bloc-section-menu__carte__choix__prix__prix{
+                        font-weight: bold;
+                    }
+                }
+                &:hover > .bloc-section-menu__carte__choix__prix {
+                    animation: ZoomX 800ms forwards ;
+                } 
+                @keyframes ZoomX {
+                    from {
+                        transform: scaleX(1);
+                    }
+                    to {
+                        transform: scaleX(0.83);
+                    } 
+                }
+                .bloc-section-menu__carte__choix_animtransl{
                     position: absolute;
                     right: 0px;
                     top: 0px;
                     border-radius: 0px 10px 10px 0px;
                     height: 100%;
-                    width: 17.2%;
-                    background-color: #35dbb2 ;
+                    width: 0%;
+                    background-color: #99e2d0 ;
                     z-index: 10;
                     display: flex;
                     justify-content: center;
-                    align-items: center;
-                    /*&::after{
-                        content: '<i class="far fa-check-circle"></i>';
-                        z-index: 12;
-                    }*/
-                }
-            }
-            @keyframes fadein {
-                from {
-                    opacity: 0;
-                    transform: translateY(-10px);
-                }
-                to{
-                    opacity: 1;
-                    transform: translateY(0);
-                } 
-            }
+                    align-items: center;  
+                    .fas{
+                        font-size: 0px;
+                        transform: rotate(-180deg);
+                        color: white;
+                        
+                    }
+                    @keyframes rot {
+                        from {
+                            font-size: 0px;
+                            transform:rotate(-180deg);
 
-            /*opacity: 0;
-            transform: translateY(-50);
-            transition: opacity 1s ease-in-out, transform 2s ease-in-out ;
-            &:hover{
-                opacity: 1;
-                transform: translateY(25);
-            }*/
-            h4{
-                width: 218px;
-                font-size: 13px;
-                font-weight: bold;
-                margin: 0px 0px 10px 0px;
-                margin-left: 12px;
-            }
-            .bloc-section-menu__carte__choix__prix{
-                width: 90%;
-                height: 12px;
-                display: flex;
-                font-size: 14px;
-                justify-content: space-between;
-                align-items: center;
-                margin-left: 12px;
-                p{
-                    margin: 0px;
+                        }
+                        to{
+                            font-size: 20px;
+                            transform:rotate(0deg);
+                            } 
+                        }
                 }
-                .bloc-section-menu__carte__choix__prix__prix{
-                    font-weight: bold;
+                &:hover > .bloc-section-menu__carte__choix_animtransl{
+                    animation: coullissant 800ms forwards ;
+                } 
+                &:hover > .bloc-section-menu__carte__choix_animtransl .fas{
+                    animation: rot 1000ms forwards;
+                }    
+                @keyframes coullissant {
+                    from {
+                        width: 0%;
+                    }
+                    to{
+                        width: 17.2%;
+                        } 
+                    }
+        
+                @keyframes fadein {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateY(0);
+                    } 
+                }
+                
+            }
+        }
+        .plats{
+            .bloc-section-menu__carte__choix{
+                width: 100%;
+                padding: 16px 0px 13px 0px;
+                transform: translateY(-10px);
+                background-color: $menu-choix-background-color;
+                box-shadow: $shadow-resto;
+                border-radius: 10px;
+                margin-bottom: 16px;
+                animation: fadein 2s 400ms forwards;
+                position: relative;
+                    .bloc-section-menu__carte__choix__prix{
+                        width: 90%;
+                        display: flex;
+                        font-size: 14px;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-left: 12px;
+                        transform-origin: 0% 50%;
+                        h4{
+                            width: 100%;
+                            font-size: 13px;
+                            font-weight: bold;
+                            margin: 0px 0px 10px 0px;
+                        }
+                        p{
+                            margin: 0px;
+                        }
+                        .bloc-section-menu__carte__choix__prix__prix{
+                            font-weight: bold;
+                        }
+                    }
+                    &:hover > .bloc-section-menu__carte__choix__prix {
+                        animation: ZoomX 800ms forwards ;
+                    } 
+                    @keyframes ZoomX {
+                        from {
+                            transform: scaleX(1);
+                        }
+                        to {
+                            transform: scaleX(0.83);
+                        } 
+                    }
+                    .bloc-section-menu__carte__choix_animtransl{
+                        position: absolute;
+                        right: 0px;
+                        top: 0px;
+                        border-radius: 0px 10px 10px 0px;
+                        height: 100%;
+                        width: 0%;
+                        background-color: #99e2d0 ;
+                        z-index: 10;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;  
+                        .fas{
+                            font-size: 0px;
+                            transform: rotate(-180deg);
+                            color: white;
+                            
+                        }
+                        @keyframes rot {
+                            from {
+                                font-size: 0px;
+                                transform:rotate(-180deg);
+
+                            }
+                            to{
+                                font-size: 20px;
+                                transform:rotate(0deg);
+                                
+                            } 
+                        }
+                    }
+                &:hover > .bloc-section-menu__carte__choix_animtransl{
+                    animation: coullissant 800ms forwards ;
+                } 
+                &:hover > .bloc-section-menu__carte__choix_animtransl .fas{
+                    animation: rot 1000ms forwards;
+                }    
+                @keyframes coullissant {
+                    from {
+                        width: 0%;
+                    }
+                    to{
+                        width: 17.2%;
+                    } 
+                }
+        
+                @keyframes fadein {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateY(0);
+                    } 
+                }
+            }
+        }
+        .desserts{
+            .bloc-section-menu__carte__choix{
+                width: 100%;
+                padding: 16px 0px 13px 0px;
+                transform: translateY(-10px);
+                background-color: $menu-choix-background-color;
+                box-shadow: $shadow-resto;
+                border-radius: 10px;
+                margin-bottom: 16px;
+                animation: fadein 2s 600ms forwards;
+                position: relative;
+                    .bloc-section-menu__carte__choix__prix{
+                        width: 90%;
+                        display: flex;
+                        font-size: 14px;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-left: 12px;
+                        transform-origin: 0% 50%;
+                        h4{
+                            width: 100%;
+                            font-size: 13px;
+                            font-weight: bold;
+                            margin: 0px 0px 10px 0px;
+                        }
+                        p{
+                            margin: 0px;
+                        }
+                        .bloc-section-menu__carte__choix__prix__prix{
+                            font-weight: bold;
+                        }
+                    }
+                    &:hover > .bloc-section-menu__carte__choix__prix {
+                        animation: ZoomX 800ms forwards ;
+                    } 
+                    @keyframes ZoomX {
+                        from {
+                            transform: scaleX(1);
+                        }
+                        to {
+                            transform: scaleX(0.83);
+                        } 
+                    }
+                    .bloc-section-menu__carte__choix_animtransl{
+                        position: absolute;
+                        right: 0px;
+                        top: 0px;
+                        border-radius: 0px 10px 10px 0px;
+                        height: 100%;
+                        width: 0%;
+                        background-color: #99e2d0 ;
+                        z-index: 10;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;  
+                        .fas{
+                            font-size: 0px;
+                            transform: rotate(-180deg);
+                            color: white;
+                            
+                        }
+                        @keyframes rot {
+                            from {
+                                font-size: 0px;
+                                transform:rotate(-180deg);
+
+                            }
+                            to{
+                                font-size: 20px;
+                                transform:rotate(0deg);
+                                
+                            } 
+                        }
+                    }
+                &:hover > .bloc-section-menu__carte__choix_animtransl{
+                    animation: coullissant 800ms forwards ;
+                } 
+                &:hover > .bloc-section-menu__carte__choix_animtransl .fas{
+                    animation: rot 1000ms forwards;
+                }
+                @keyframes coullissant {
+                    from {
+                        width: 0%;
+                    }
+                    to{
+                        width: 17.2%;
+                        } 
+                    }
+        
+                @keyframes fadein {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateY(0);
+                    } 
                 }
             }
         }
@@ -227,7 +462,7 @@
             button{
                 @include button;
                 transform: scale(1);
-                transition: transform 400ms;
+                transition: transform 300ms;
                 &:hover{
                     transform: scale(1.15);
                     background: linear-gradient(to bottom right,lighten($secondary-color,6%),lighten($primary-color,6%));
