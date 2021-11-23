@@ -29,7 +29,9 @@
                     position: absolute;
                     top: 0px;
                     left: 0px;
-                    color: #9356DC;
+                    background: linear-gradient(to bottom right,lighten($secondary-color,6%),lighten($primary-color,6%));
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
                     opacity: 0;
                     transition: opacity 2000ms ease-in-out;
                     z-index: 5;
