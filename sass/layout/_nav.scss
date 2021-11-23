@@ -1,3 +1,4 @@
+/*-------------------------------------menu de navigation-----------------------*/
 .menu-navigation{
     display: flex;
     @include justify-content-spa;
@@ -22,6 +23,7 @@
             }
             .button{
                 display: flex;
+                /*justify-content: space-around;*/
                 align-items: center;
                 border: 0px;
                 box-shadow: $shadow-button;
@@ -48,14 +50,20 @@
                 }
                 p{
                     margin-left: 41px;
+                    @media screen and (max-width: 374px) {
+                        margin-left: 12.772%;
+                        margin-right: 3.115%;
+                    }
                 }
                 .fas{
                     color: #7e7e7e;
                     margin-left: 35px;
                     font-size: 20px;
+                    @media screen and (max-width: 374px) {
+                        margin-left: 10.903%;
+                    }
                 }
             }
         }
     }  
-   
 }

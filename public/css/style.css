@@ -65,6 +65,7 @@ img {
   object-fit: cover;
 }
 
+/*-------------------------------------header accueil-------------------*/
 .header-accueil {
   width: 100%;
   display: flex;
@@ -193,6 +194,7 @@ img {
   height: 100%;
 }
 
+/*-------------------------------------menu de navigation-----------------------*/
 .menu-navigation {
   display: flex;
   justify-content: space-around;
@@ -223,6 +225,7 @@ img {
 }
 .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button {
   display: flex;
+  /*justify-content: space-around;*/
   align-items: center;
   border: 0px;
   box-shadow: 5px 5px 5px rgba(28, 26, 25, 0.2);
@@ -251,12 +254,24 @@ img {
 .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button p {
   margin-left: 41px;
 }
+@media screen and (max-width: 374px) {
+  .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button p {
+    margin-left: 12.772%;
+    margin-right: 3.115%;
+  }
+}
 .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button .fas {
   color: #7e7e7e;
   margin-left: 35px;
   font-size: 20px;
 }
+@media screen and (max-width: 374px) {
+  .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button .fas {
+    margin-left: 10.903%;
+  }
+}
 
+/*----------------------------------Section accueil---------------------*/
 .bloc-section {
   width: 100%;
   display: flex;
@@ -724,6 +739,7 @@ img {
   background: linear-gradient(to bottom right, #ff98e2, #a36fe1);
 }
 
+/*-----------------Footer accueil------------------*/
 .bas-page {
   width: 100%;
   height: 197px;
@@ -752,7 +768,7 @@ img {
   list-style-type: none;
 }
 
-/*------------------------footer----------------------------*/
+/*------------------------footer-menu----------------------------*/
 .bas-page-menu {
   width: 100%;
   height: 197px;
@@ -761,8 +777,6 @@ img {
 }
 .bas-page-menu .bas-page-menu__block {
   margin-left: 25px;
-  /* position: relative;
-  top: 27px; */
 }
 .bas-page-menu .bas-page-menu__block .bas-page-menu__block__titre {
   font-size: 15px;
