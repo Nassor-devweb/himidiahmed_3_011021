@@ -252,17 +252,17 @@ img {
   color: white;
 }
 .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button p {
-  margin-left: 41px;
+  margin-left: 12.772%;
+  margin-right: 3.115%;
 }
 @media screen and (max-width: 374px) {
   .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button p {
     margin-left: 12.772%;
-    margin-right: 3.115%;
   }
 }
 .menu-navigation .menu-navigation__contenair .menu-navigation__contenair__button .button .fas {
   color: #7e7e7e;
-  margin-left: 35px;
+  margin-left: 10.9%;
   font-size: 20px;
 }
 @media screen and (max-width: 374px) {
