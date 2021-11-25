@@ -1,12 +1,12 @@
 /*-----------------Footer accueil------------------*/
 .bas-page{
     width: 100%;
-    height: 197px;
     background-color: $footer-background-color;
     color: white;
     padding-top: 27px;
+    padding-bottom: 30px;
     .bas-page__block{
-        width: 80%;
+        width: 60%;
         padding-left: 25px;
         .bas-page__block__titre{
             font-size: 15px;
@@ -19,9 +19,18 @@
             font-size: 12px ;
             margin: 0px;
             padding: 0px; 
+            @media screen and (min-width: 479px) and (max-width: 769px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
             li{
                 margin-bottom: 15px;
                 list-style-type: none;
+                @media screen and (min-width: 479px) and (max-width: 769px) {
+                    display: inline-block;
+                    width: 44.79%;
+                }
             }
         }
     }

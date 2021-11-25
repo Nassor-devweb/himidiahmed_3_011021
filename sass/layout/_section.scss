@@ -6,6 +6,18 @@
     background-color: $tertiaire-color;
     .bloc-section__inter{
         width: 89%;
+        @media screen and (min-width: 479px) and (max-width: 769px) {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .bloc-section__inter__titre{
+            width: 100%;
+            @media screen and (min-width: 479px) and (max-width: 769px) {
+                width: 95%;
+            }
+        }
         .bloc-section__inter__resto{
             position: relative;
             width: 100%;
@@ -13,8 +25,15 @@
             margin-bottom: 18px;
             border-radius: 20px;
             box-shadow: $shadow-resto;
+            @media screen and (min-width: 479px) and (max-width: 769px) {
+                width: 45.83%;
+                margin-bottom: 40px;
+            }
             &:nth-child(5) {
                 margin-bottom: 64px;
+                @media screen and (min-width: 479px) and (max-width: 769px) {
+                    margin-bottom: 0px;
+                }
             }
             .icon-coeur{
                 position: absolute;
