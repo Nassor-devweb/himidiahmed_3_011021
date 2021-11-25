@@ -19,7 +19,7 @@
             font-size: 12px ;
             margin: 0px;
             padding: 0px; 
-            @media screen and (min-width: 479px) and (max-width: 769px) {
+            @media screen and (min-width: 479px) and (max-width: 1279px) {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -27,7 +27,7 @@
             li{
                 margin-bottom: 15px;
                 list-style-type: none;
-                @media screen and (min-width: 479px) and (max-width: 769px) {
+                @media screen and (min-width: 479px) and (max-width: 1279px) {
                     display: inline-block;
                     width: 44.79%;
                 }
