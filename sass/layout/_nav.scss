@@ -16,12 +16,12 @@
         }
         .menu-navigation__contenair3{
             width: 100%;
-            @media screen and (min-width: 479px) and (max-width: 769px) {
+            @media screen and (min-width: 479px) {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-around;
             }
-            @media screen and (min-width: 770px) and (max-width: 1279px) {
+            @media screen and (min-width: 770px) {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -30,10 +30,10 @@
                 height: 72px;
                 width: 100%;
                 margin-top: 26px;
-                @media screen and (min-width: 479px) and (max-width: 769px) {
+                @media screen and (min-width: 479px)  {
                     width: 407px;
                 }
-                @media screen and (min-width: 770px) and (max-width: 1279px) {
+                @media screen and (min-width: 770px) {
                     width: 319px;
                     &:nth-child(1) {
                         margin-left: 20px;

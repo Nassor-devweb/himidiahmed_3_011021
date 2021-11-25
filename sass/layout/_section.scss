@@ -6,18 +6,21 @@
     background-color: $tertiaire-color;
     .bloc-section__inter{
         width: 89%;
-        @media screen and (min-width: 479px) and (max-width: 1279px) {
+        @media screen and (min-width: 479px) {
             width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            @media screen and (min-width: 479px) and (max-width: 1279px) {
+            @media screen and (min-width: 479px)  {
                 width: 95%;
+            }
+            @media screen and (min-width: 1280px)  {
+                width: 85%;
             }
         }
         .bloc-section__inter__titre{
             width: 100%;
-            @media screen and (min-width: 479px) and (max-width: 1279px) {
+            @media screen and (min-width: 479px) {
                 width: 95%;
             }
         }
@@ -28,16 +31,16 @@
             margin-bottom: 18px;
             border-radius: 20px;
             box-shadow: $shadow-resto;
-            @media screen and (min-width: 479px) and (max-width: 1279px) {
+            @media screen and (min-width: 479px) {
                 width: 45.83%;
                 margin-bottom: 40px;
             }
-            @media screen and (min-width: 479px) and (max-width: 1279px) {
-                height: 270px;
+            @media screen and (min-width: 1280px) {
+                height: 320px;
             }
             &:nth-child(5) {
                 margin-bottom: 64px;
-                @media screen and (min-width: 479px) and (max-width: 1279px) {
+                @media screen and (min-width: 479px) {
                     margin-bottom: 0px;
                 }
             }
@@ -96,13 +99,16 @@
                 }
                 img{
                     z-index: 1;
-                    height: 173px;
+                    height: 193px;
                     width: 100%;
                     border-radius: 20px 20px 0px 0px;
                     position: absolute;
                     top: 0px;
                     @media screen and (min-width: 479px) and (max-width: 1279px) {
                         height: 193px;
+                    }
+                    @media screen and (min-width: 1280px){
+                        height: 243px;
                     }
                 }
                 .Presentation_resto{
@@ -173,6 +179,11 @@
             font-weight: normal;
         }
         .entree{
+            @media screen and (min-width: 769px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
             .bloc-section-menu__carte__choix{
                 width: 100%;
                 padding: 16px 0px 13px 0px;
@@ -183,6 +194,9 @@
                 margin-bottom: 16px;
                 animation: fadein 2s forwards;
                 position: relative;
+                @media screen and (min-width: 769px) {
+                    width: 60%;
+                }
                 .bloc-section-menu__carte__choix__prix{
                     width: 90%;
                     display: flex;
@@ -275,6 +289,11 @@
             }
         }
         .plats{
+            @media screen and (min-width: 769px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
             .bloc-section-menu__carte__choix{
                 width: 100%;
                 padding: 16px 0px 13px 0px;
@@ -285,6 +304,9 @@
                 margin-bottom: 16px;
                 animation: fadein 2s 400ms forwards;
                 position: relative;
+                @media screen and (min-width: 769px) {
+                    width: 60%;
+                }
                     .bloc-section-menu__carte__choix__prix{
                         width: 90%;
                         display: flex;
@@ -377,6 +399,11 @@
             }
         }
         .desserts{
+            @media screen and (min-width: 769px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
             .bloc-section-menu__carte__choix{
                 width: 100%;
                 padding: 16px 0px 13px 0px;
@@ -387,6 +414,9 @@
                 margin-bottom: 16px;
                 animation: fadein 2s 600ms forwards;
                 position: relative;
+                @media screen and (min-width: 769px) {
+                    width: 60%;
+                }
                     .bloc-section-menu__carte__choix__prix{
                         width: 90%;
                         display: flex;
@@ -490,6 +520,9 @@
             height: 50px;
             width: 58%;
             border-radius: 25px; 
+            @media screen and (min-width: 479px) {
+                width: 232px;
+            }
             button{
                 @include button;
                 transform: scale(1);
