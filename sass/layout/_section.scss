@@ -49,9 +49,10 @@
                 right: 24px;
                 bottom: 33px;
                 font-size: 20px;
+                z-index: 20;
                 .far{
                     opacity: 1;
-                    z-index: 1;
+                    z-index: 4;
                     transition: opacity 1000ms ease-in-out;
                 }
                 .fas{
@@ -79,7 +80,6 @@
                 display: inline-block;
                 position: relative;
                 text-decoration: none;  
-                position: relative;
                 .presentation_resto_nouveau{
                     display: flex;
                     justify-content: space-around;
@@ -87,7 +87,6 @@
                     position: absolute;
                     top: 12px;
                     right: 10px;
-                    z-index: 5;
                     background-color: #99e2d0;
                     width: 80px;
                     height: 28px;
@@ -98,7 +97,6 @@
                     }
                 }
                 img{
-                    z-index: 1;
                     height: 193px;
                     width: 100%;
                     border-radius: 20px 20px 0px 0px;
@@ -122,6 +120,7 @@
                     position: absolute;
                     bottom: 0px;
                     color: black;
+                    z-index: 3;
                     h4{
                         margin-top: 20px;
                         margin-left: 14px;
@@ -177,6 +176,16 @@
             margin: 50px 0px 15px 0px;
             font-size: 12px;
             font-weight: normal;
+            position: relative;
+            &::after{
+                content: "";
+                width: 30px;
+                height: 3px;
+                background-color: #99e2d0;
+                position: absolute;
+                bottom: -9px;
+                left: 0px;
+            }
         }
         .entree{
             @media screen and (min-width: 769px) {
@@ -192,44 +201,76 @@
                 box-shadow: $shadow-resto;
                 border-radius: 10px;
                 margin-bottom: 16px;
-                animation: fadein 2s forwards;
+                animation: fadein 2s 600ms forwards;
                 position: relative;
                 @media screen and (min-width: 769px) {
                     width: 60%;
                 }
-                .bloc-section-menu__carte__choix__prix{
-                    width: 90%;
-                    display: flex;
-                    font-size: 14px;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-left: 12px;
-                    transform-origin: 0% 50%;
-                    h4{
-                        width: 100%;
-                        font-size: 13px;
-                        font-weight: bold;
-                        margin: 0px 0px 10px 0px;
-                    }
-                    p{
-                        margin: 0px;
-                    }
-                    .bloc-section-menu__carte__choix__prix__prix{
-                        font-weight: bold;
-                    }
-                }
-                &:hover > .bloc-section-menu__carte__choix__prix {
-                    animation: ZoomX 800ms forwards ;
-                } 
-                @keyframes ZoomX {
+                @keyframes fadein {
                     from {
-                        transform: scaleX(1);
+                        opacity: 0;
+                        transform: translateY(-10px);
                     }
-                    to {
-                        transform: scaleX(0.83);
+                    to{
+                        opacity: 1;
+                        transform: translateY(0);
                     } 
                 }
+                    .bloc-section-menu__carte__choix__prix{
+                        width: 90%;
+                        display: flex;
+                        font-size: 14px;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-left: 12px;
+                        transform-origin: 0% 50%;
+                        .bloc-section-menu__carte__choix__prix__prix{
+                            height: 14px ;
+                            font-weight: bold;
+                            margin-top: 28px;
+                            margin-bottom: 0px;
+                        }
+                        @keyframes depl_prix {
+                            from {
+                                transform: translateX(0px);
+                            }
+                            to {
+                                transform: translateX(-62.8px);
+                            }
+                        }
+                        .bloc-section-menu__carte__choix__prix__info_prix{
+                            display: flex;
+                            flex-wrap: wrap;
+                            width: 83%;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            h4{
+                                width: 100%;
+                                font-size: 13px;
+                                font-weight: bold;
+                                margin: 0px 0px 10px 0px;
+                            }
+                            p{
+                                margin: 0px;
+                            }  
+                        }
+                        @keyframes largeur {
+                            from {
+                                width: 83%;
+                            }
+                            to {
+                                width: 65%;
+                            } 
+                        }
+                    }
+                    &:hover .bloc-section-menu__carte__choix__prix__info_prix {
+                        animation: largeur 800ms forwards ;
+                    } 
+                    &:hover .bloc-section-menu__carte__choix__prix__prix {
+                        animation: depl_prix 800ms forwards ;
+                    } 
                 .bloc-section-menu__carte__choix_animtransl{
                     position: absolute;
                     right: 0px;
@@ -243,29 +284,30 @@
                     justify-content: center;
                     align-items: center;  
                     .fas{
-                        font-size: 0px;
+                        font-size: 20px;
                         transform: rotate(-180deg);
+                        opacity: 0;
                         color: white;
-                        
                     }
                     @keyframes rot {
                         from {
-                            font-size: 0px;
                             transform:rotate(-180deg);
-
                         }
                         to{
-                            font-size: 20px;
                             transform:rotate(0deg);
-                            } 
-                        }
+                        } 
+                    }
                 }
                 &:hover > .bloc-section-menu__carte__choix_animtransl{
                     animation: coullissant 800ms forwards ;
                 } 
                 &:hover > .bloc-section-menu__carte__choix_animtransl .fas{
-                    animation: rot 1000ms forwards;
+                    animation: rot 800ms forwards;
                 }    
+                &:hover .fas{
+                    opacity: 1;
+                } 
+
                 @keyframes coullissant {
                     from {
                         width: 0%;
@@ -302,10 +344,20 @@
                 box-shadow: $shadow-resto;
                 border-radius: 10px;
                 margin-bottom: 16px;
-                animation: fadein 2s 400ms forwards;
+                animation: fadein 2s 600ms forwards;
                 position: relative;
                 @media screen and (min-width: 769px) {
                     width: 60%;
+                }
+                @keyframes fadein {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateY(0);
+                    } 
                 }
                     .bloc-section-menu__carte__choix__prix{
                         width: 90%;
@@ -316,30 +368,52 @@
                         align-items: center;
                         margin-left: 12px;
                         transform-origin: 0% 50%;
-                        h4{
-                            width: 100%;
-                            font-size: 13px;
-                            font-weight: bold;
-                            margin: 0px 0px 10px 0px;
-                        }
-                        p{
-                            margin: 0px;
-                        }
                         .bloc-section-menu__carte__choix__prix__prix{
+                            height: 14px ;
                             font-weight: bold;
+                            margin-top: 28px;
+                            margin-bottom: 0px;
+                        }
+                        @keyframes depl_prix {
+                            from {
+                                transform: translateX(0px);
+                            }
+                            to {
+                                transform: translateX(-62.8px);
+                            }
+                        }
+                        .bloc-section-menu__carte__choix__prix__info_prix{
+                            display: flex;
+                            flex-wrap: wrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            width: 85%;
+                            h4{
+                                width: 100%;
+                                font-size: 13px;
+                                font-weight: bold;
+                                margin: 0px 0px 10px 0px;
+                            }
+                            p{
+                                margin: 0px;
+                            }  
+                        }
+                        @keyframes largeur {
+                            from {
+                                width: 85%;
+                            }
+                            to {
+                                width: 65%;
+                            } 
                         }
                     }
-                    &:hover > .bloc-section-menu__carte__choix__prix {
-                        animation: ZoomX 800ms forwards ;
+                    &:hover .bloc-section-menu__carte__choix__prix__info_prix {
+                        animation: largeur 800ms forwards ;
                     } 
-                    @keyframes ZoomX {
-                        from {
-                            transform: scaleX(1);
-                        }
-                        to {
-                            transform: scaleX(0.83);
-                        } 
-                    }
+                    &:hover .bloc-section-menu__carte__choix__prix__prix {
+                        animation: depl_prix 800ms forwards ;
+                    } 
                     .bloc-section-menu__carte__choix_animtransl{
                         position: absolute;
                         right: 0px;
@@ -353,30 +427,29 @@
                         justify-content: center;
                         align-items: center;  
                         .fas{
-                            font-size: 0px;
+                            font-size: 20px;
                             transform: rotate(-180deg);
+                            opacity: 0;
                             color: white;
-                            
                         }
                         @keyframes rot {
                             from {
-                                font-size: 0px;
                                 transform:rotate(-180deg);
-
                             }
                             to{
-                                font-size: 20px;
                                 transform:rotate(0deg);
-                                
                             } 
                         }
                     }
-                &:hover > .bloc-section-menu__carte__choix_animtransl{
-                    animation: coullissant 800ms forwards ;
-                } 
-                &:hover > .bloc-section-menu__carte__choix_animtransl .fas{
-                    animation: rot 1000ms forwards;
-                }    
+                    &:hover > .bloc-section-menu__carte__choix_animtransl{
+                        animation: coullissant 800ms forwards ;
+                    } 
+                    &:hover > .bloc-section-menu__carte__choix_animtransl .fas{
+                        animation: rot 800ms forwards;
+                    }    
+                    &:hover .fas{
+                        opacity: 1;
+                    }  
                 @keyframes coullissant {
                     from {
                         width: 0%;
@@ -417,6 +490,16 @@
                 @media screen and (min-width: 769px) {
                     width: 60%;
                 }
+                @keyframes fadein {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateY(0);
+                    } 
+                }
                     .bloc-section-menu__carte__choix__prix{
                         width: 90%;
                         display: flex;
@@ -426,30 +509,52 @@
                         align-items: center;
                         margin-left: 12px;
                         transform-origin: 0% 50%;
-                        h4{
-                            width: 100%;
-                            font-size: 13px;
-                            font-weight: bold;
-                            margin: 0px 0px 10px 0px;
-                        }
-                        p{
-                            margin: 0px;
-                        }
                         .bloc-section-menu__carte__choix__prix__prix{
+                            height: 14px ;
                             font-weight: bold;
+                            margin-top: 28px;
+                            margin-bottom: 0px;
+                        }
+                        @keyframes depl_prix {
+                            from {
+                                transform: translateX(0px);
+                            }
+                            to {
+                                transform: translateX(-62.8px);
+                            }
+                        }
+                        .bloc-section-menu__carte__choix__prix__info_prix{
+                            display: flex;
+                            flex-wrap: wrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+                            width: 83%;
+                            h4{
+                                width: 100%;
+                                font-size: 13px;
+                                font-weight: bold;
+                                margin: 0px 0px 10px 0px;
+                            }
+                            p{
+                                margin: 0px;
+                            }  
+                        }
+                        @keyframes largeur {
+                            from {
+                                width: 83%;
+                            }
+                            to {
+                                width: 65%;
+                            } 
                         }
                     }
-                    &:hover > .bloc-section-menu__carte__choix__prix {
-                        animation: ZoomX 800ms forwards ;
+                    &:hover .bloc-section-menu__carte__choix__prix__info_prix {
+                        animation: largeur 800ms forwards ;
                     } 
-                    @keyframes ZoomX {
-                        from {
-                            transform: scaleX(1);
-                        }
-                        to {
-                            transform: scaleX(0.83);
-                        } 
-                    }
+                    &:hover .bloc-section-menu__carte__choix__prix__prix {
+                        animation: depl_prix 800ms forwards ;
+                    } 
                     .bloc-section-menu__carte__choix_animtransl{
                         position: absolute;
                         right: 0px;
@@ -463,30 +568,29 @@
                         justify-content: center;
                         align-items: center;  
                         .fas{
-                            font-size: 0px;
+                            font-size: 20px;
                             transform: rotate(-180deg);
+                            opacity: 0;
                             color: white;
-                            
                         }
                         @keyframes rot {
                             from {
-                                font-size: 0px;
                                 transform:rotate(-180deg);
-
                             }
                             to{
-                                font-size: 20px;
                                 transform:rotate(0deg);
-                                
                             } 
                         }
                     }
-                &:hover > .bloc-section-menu__carte__choix_animtransl{
-                    animation: coullissant 800ms forwards ;
-                } 
-                &:hover > .bloc-section-menu__carte__choix_animtransl .fas{
-                    animation: rot 1000ms forwards;
-                }
+                    &:hover > .bloc-section-menu__carte__choix_animtransl{
+                        animation: coullissant 800ms forwards ;
+                    } 
+                    &:hover > .bloc-section-menu__carte__choix_animtransl .fas{
+                        animation: rot 800ms forwards;
+                    }    
+                    &:hover .fas{
+                        opacity: 1;
+                    } 
                 @keyframes coullissant {
                     from {
                         width: 0%;
@@ -495,17 +599,6 @@
                         width: 17.2%;
                         } 
                     }
-        
-                @keyframes fadein {
-                    from {
-                        opacity: 0;
-                        transform: translateY(-10px);
-                    }
-                    to{
-                        opacity: 1;
-                        transform: translateY(0);
-                    } 
-                }
             }
         }
     }
@@ -530,7 +623,7 @@
                 &:hover{
                     transform: scale(1.15);
                     background: linear-gradient(to bottom right,lighten($secondary-color,6%),lighten($primary-color,6%));
-                    $shadow-button:10px 10px 10px rgba(28,26,25,1);
+                    box-shadow:10px 10px 10px rgba(28,26,25,1);
                 }
            }
         }

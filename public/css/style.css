@@ -384,10 +384,11 @@ img {
   right: 24px;
   bottom: 33px;
   font-size: 20px;
+  z-index: 20;
 }
 .bloc-section .bloc-section__inter .bloc-section__inter__resto .icon-coeur .far {
   opacity: 1;
-  z-index: 1;
+  z-index: 4;
   transition: opacity 1000ms ease-in-out;
 }
 .bloc-section .bloc-section__inter .bloc-section__inter__resto .icon-coeur .fas {
@@ -415,7 +416,6 @@ img {
   display: inline-block;
   position: relative;
   text-decoration: none;
-  position: relative;
 }
 .bloc-section .bloc-section__inter .bloc-section__inter__resto a .presentation_resto_nouveau {
   display: flex;
@@ -424,7 +424,6 @@ img {
   position: absolute;
   top: 12px;
   right: 10px;
-  z-index: 5;
   background-color: #99e2d0;
   width: 80px;
   height: 28px;
@@ -435,7 +434,6 @@ img {
   font-weight: bold;
 }
 .bloc-section .bloc-section__inter .bloc-section__inter__resto a img {
-  z-index: 1;
   height: 193px;
   width: 100%;
   border-radius: 20px 20px 0px 0px;
@@ -463,6 +461,7 @@ img {
   position: absolute;
   bottom: 0px;
   color: black;
+  z-index: 3;
 }
 .bloc-section .bloc-section__inter .bloc-section__inter__resto a .Presentation_resto h4 {
   margin-top: 20px;
@@ -516,6 +515,16 @@ img {
   margin: 50px 0px 15px 0px;
   font-size: 12px;
   font-weight: normal;
+  position: relative;
+}
+.bloc-section-menu .bloc-section-menu__carte h3::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: #99e2d0;
+  position: absolute;
+  bottom: -9px;
+  left: 0px;
 }
 @media screen and (min-width: 769px) {
   .bloc-section-menu .bloc-section-menu__carte .entree {
@@ -532,12 +541,22 @@ img {
   box-shadow: 5px 5px 5px rgba(28, 26, 25, 0.1);
   border-radius: 10px;
   margin-bottom: 16px;
-  animation: fadein 2s forwards;
+  animation: fadein 2s 600ms forwards;
   position: relative;
 }
 @media screen and (min-width: 769px) {
   .bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix {
     width: 60%;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix {
@@ -550,28 +569,50 @@ img {
   margin-left: 12px;
   transform-origin: 0% 50%;
 }
-.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix h4 {
+.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__prix {
+  height: 14px;
+  font-weight: bold;
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+@keyframes depl_prix {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-62.8px);
+  }
+}
+.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix {
+  display: flex;
+  flex-wrap: wrap;
+  width: 83%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix h4 {
   width: 100%;
   font-size: 13px;
   font-weight: bold;
   margin: 0px 0px 10px 0px;
 }
-.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix p {
+.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix p {
   margin: 0px;
 }
-.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__prix {
-  font-weight: bold;
-}
-.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix:hover > .bloc-section-menu__carte__choix__prix {
-  animation: ZoomX 800ms forwards;
-}
-@keyframes ZoomX {
+@keyframes largeur {
   from {
-    transform: scaleX(1);
+    width: 83%;
   }
   to {
-    transform: scaleX(0.83);
+    width: 65%;
   }
+}
+.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix:hover .bloc-section-menu__carte__choix__prix__info_prix {
+  animation: largeur 800ms forwards;
+}
+.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix:hover .bloc-section-menu__carte__choix__prix__prix {
+  animation: depl_prix 800ms forwards;
 }
 .bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix_animtransl {
   position: absolute;
@@ -587,17 +628,16 @@ img {
   align-items: center;
 }
 .bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix_animtransl .fas {
-  font-size: 0px;
+  font-size: 20px;
   transform: rotate(-180deg);
+  opacity: 0;
   color: white;
 }
 @keyframes rot {
   from {
-    font-size: 0px;
     transform: rotate(-180deg);
   }
   to {
-    font-size: 20px;
     transform: rotate(0deg);
   }
 }
@@ -605,7 +645,10 @@ img {
   animation: coullissant 800ms forwards;
 }
 .bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix:hover > .bloc-section-menu__carte__choix_animtransl .fas {
-  animation: rot 1000ms forwards;
+  animation: rot 800ms forwards;
+}
+.bloc-section-menu .bloc-section-menu__carte .entree .bloc-section-menu__carte__choix:hover .fas {
+  opacity: 1;
 }
 @keyframes coullissant {
   from {
@@ -640,12 +683,22 @@ img {
   box-shadow: 5px 5px 5px rgba(28, 26, 25, 0.1);
   border-radius: 10px;
   margin-bottom: 16px;
-  animation: fadein 2s 400ms forwards;
+  animation: fadein 2s 600ms forwards;
   position: relative;
 }
 @media screen and (min-width: 769px) {
   .bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix {
     width: 60%;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix {
@@ -658,28 +711,50 @@ img {
   margin-left: 12px;
   transform-origin: 0% 50%;
 }
-.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix h4 {
+.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__prix {
+  height: 14px;
+  font-weight: bold;
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+@keyframes depl_prix {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-62.8px);
+  }
+}
+.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix {
+  display: flex;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 85%;
+}
+.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix h4 {
   width: 100%;
   font-size: 13px;
   font-weight: bold;
   margin: 0px 0px 10px 0px;
 }
-.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix p {
+.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix p {
   margin: 0px;
 }
-.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__prix {
-  font-weight: bold;
-}
-.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix:hover > .bloc-section-menu__carte__choix__prix {
-  animation: ZoomX 800ms forwards;
-}
-@keyframes ZoomX {
+@keyframes largeur {
   from {
-    transform: scaleX(1);
+    width: 85%;
   }
   to {
-    transform: scaleX(0.83);
+    width: 65%;
   }
+}
+.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix:hover .bloc-section-menu__carte__choix__prix__info_prix {
+  animation: largeur 800ms forwards;
+}
+.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix:hover .bloc-section-menu__carte__choix__prix__prix {
+  animation: depl_prix 800ms forwards;
 }
 .bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix_animtransl {
   position: absolute;
@@ -695,17 +770,16 @@ img {
   align-items: center;
 }
 .bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix_animtransl .fas {
-  font-size: 0px;
+  font-size: 20px;
   transform: rotate(-180deg);
+  opacity: 0;
   color: white;
 }
 @keyframes rot {
   from {
-    font-size: 0px;
     transform: rotate(-180deg);
   }
   to {
-    font-size: 20px;
     transform: rotate(0deg);
   }
 }
@@ -713,7 +787,10 @@ img {
   animation: coullissant 800ms forwards;
 }
 .bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix:hover > .bloc-section-menu__carte__choix_animtransl .fas {
-  animation: rot 1000ms forwards;
+  animation: rot 800ms forwards;
+}
+.bloc-section-menu .bloc-section-menu__carte .plats .bloc-section-menu__carte__choix:hover .fas {
+  opacity: 1;
 }
 @keyframes coullissant {
   from {
@@ -756,6 +833,16 @@ img {
     width: 60%;
   }
 }
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix {
   width: 90%;
   display: flex;
@@ -766,28 +853,50 @@ img {
   margin-left: 12px;
   transform-origin: 0% 50%;
 }
-.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix h4 {
+.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__prix {
+  height: 14px;
+  font-weight: bold;
+  margin-top: 28px;
+  margin-bottom: 0px;
+}
+@keyframes depl_prix {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-62.8px);
+  }
+}
+.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix {
+  display: flex;
+  flex-wrap: wrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 83%;
+}
+.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix h4 {
   width: 100%;
   font-size: 13px;
   font-weight: bold;
   margin: 0px 0px 10px 0px;
 }
-.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix p {
+.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__info_prix p {
   margin: 0px;
 }
-.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix__prix .bloc-section-menu__carte__choix__prix__prix {
-  font-weight: bold;
-}
-.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix:hover > .bloc-section-menu__carte__choix__prix {
-  animation: ZoomX 800ms forwards;
-}
-@keyframes ZoomX {
+@keyframes largeur {
   from {
-    transform: scaleX(1);
+    width: 83%;
   }
   to {
-    transform: scaleX(0.83);
+    width: 65%;
   }
+}
+.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix:hover .bloc-section-menu__carte__choix__prix__info_prix {
+  animation: largeur 800ms forwards;
+}
+.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix:hover .bloc-section-menu__carte__choix__prix__prix {
+  animation: depl_prix 800ms forwards;
 }
 .bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix_animtransl {
   position: absolute;
@@ -803,17 +912,16 @@ img {
   align-items: center;
 }
 .bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix .bloc-section-menu__carte__choix_animtransl .fas {
-  font-size: 0px;
+  font-size: 20px;
   transform: rotate(-180deg);
+  opacity: 0;
   color: white;
 }
 @keyframes rot {
   from {
-    font-size: 0px;
     transform: rotate(-180deg);
   }
   to {
-    font-size: 20px;
     transform: rotate(0deg);
   }
 }
@@ -821,7 +929,10 @@ img {
   animation: coullissant 800ms forwards;
 }
 .bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix:hover > .bloc-section-menu__carte__choix_animtransl .fas {
-  animation: rot 1000ms forwards;
+  animation: rot 800ms forwards;
+}
+.bloc-section-menu .bloc-section-menu__carte .desserts .bloc-section-menu__carte__choix:hover .fas {
+  opacity: 1;
 }
 @keyframes coullissant {
   from {
@@ -829,16 +940,6 @@ img {
   }
   to {
     width: 17.2%;
-  }
-}
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 .bloc-section-menu .button-menu {
@@ -875,6 +976,7 @@ img {
 .bloc-section-menu .button-menu .button_explorer button:hover {
   transform: scale(1.15);
   background: linear-gradient(to bottom right, #ff98e2, #a36fe1);
+  box-shadow: 10px 10px 10px #1c1a19;
 }
 
 /*-----------------Footer accueil------------------*/
@@ -918,6 +1020,10 @@ img {
     width: 44.79%;
   }
 }
+.bas-page .bas-page__block .bas-page__block__liste a {
+  text-decoration: none;
+  color: white;
+}
 
 /*------------------------footer-menu----------------------------*/
 .bas-page-menu {
@@ -944,6 +1050,9 @@ img {
 .bas-page-menu .bas-page-menu__block .bas-page-menu__block__liste li {
   margin-bottom: 15px;
   list-style-type: none;
+}
+.bas-page-menu .bas-page-menu__block .bas-page-menu__block__liste a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
