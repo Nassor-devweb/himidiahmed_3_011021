@@ -27,20 +27,28 @@
             li{
                 margin-bottom: 15px;
                 list-style-type: none;
+                a{
+                    text-decoration: none;
+                    color: white;
+                    display: inline-block;
+                    width: 100%;
+                }
                 @media screen and (min-width: 479px) {
                     display: inline-block;
                     width: 44.79%;
                 }
             }
-            a{
-                text-decoration: none;
-                color: white;
-                display: inline-block;
-                width: 44.79%;
-                li{
-                    width: 100%;
-                }
+            .fas.fa-hands-helping{
+                font-size: 12px;
+                margin-right: 8px;
             }
+            .ustensils{
+                .fas.fa-utensils{
+                    font-size: 12px;
+                    margin-right: 12px;
+                } 
+            }   
+            
         }
     }
 

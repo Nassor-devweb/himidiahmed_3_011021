@@ -239,21 +239,34 @@
                                 transform: translateX(-62.8px);
                             }
                         }
+                        @media screen and (min-width: 1280px)  {
+                            @keyframes depl_prix {
+                                from {
+                                    transform: translateX(0px);
+                                }
+                                to {
+                                    transform: translateX(-500.8px);
+                                }
+                            }
+                        }
                         .bloc-section-menu__carte__choix__prix__info_prix{
                             display: flex;
                             flex-wrap: wrap;
                             width: 83%;
-                            text-overflow: ellipsis;
-                            overflow: hidden;
-                            white-space: nowrap;
                             h4{
                                 width: 100%;
                                 font-size: 13px;
                                 font-weight: bold;
                                 margin: 0px 0px 10px 0px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
                             }
                             p{
                                 margin: 0px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
                             }  
                         }
                         @keyframes largeur {
@@ -394,9 +407,15 @@
                                 font-size: 13px;
                                 font-weight: bold;
                                 margin: 0px 0px 10px 0px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
                             }
                             p{
                                 margin: 0px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
                             }  
                         }
                         @keyframes largeur {
@@ -535,9 +554,15 @@
                                 font-size: 13px;
                                 font-weight: bold;
                                 margin: 0px 0px 10px 0px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
                             }
                             p{
                                 margin: 0px;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                white-space: nowrap;
                             }  
                         }
                         @keyframes largeur {
