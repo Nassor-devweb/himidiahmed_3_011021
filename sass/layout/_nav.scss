@@ -26,6 +26,14 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
             }
+            .menu-navigation__contenair__button.menu-navigation__contenair__button3{
+                .button{
+                    background-color: #f5edff;
+                    .fas{
+                        color: #9356dc;
+                    }
+                }
+            }
             .menu-navigation__contenair__button{
                 height: 72px;
                 width: 100%;
@@ -52,7 +60,7 @@
                     display: flex;
                     align-items: center;
                     border: 0px;
-                    box-shadow: $shadow-button;
+                    box-shadow: $shadow-button;            
                     font-size: 12px;
                     font-weight: bold;
                     border-radius: 20px;
@@ -79,7 +87,6 @@
                         margin-right: 3.115%;
                         @media screen and (max-width: 374px) {
                             margin-left: 12.772%;
-                            
                         }
                     }
                     .fas{

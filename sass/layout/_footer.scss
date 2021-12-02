@@ -35,39 +35,11 @@
             a{
                 text-decoration: none;
                 color: white;
-            }
-        }
-    }
-
-}
-
-/*------------------------footer-menu----------------------------*/
-
-
-.bas-page-menu{
-    width: 100%;
-    height: 197px;
-    background-color: $footer-background-color;
-    color: white;
-    .bas-page-menu__block{
-        margin-left: 25px;
-        .bas-page-menu__block__titre{
-            font-size: 15px;
-            font-family: "shrikhand";
-            padding: 0px;
-            margin-top: 0px;
-            margin-bottom: 27px;
-        }
-        .bas-page-menu__block__liste{
-            font-size: 12px ;
-            margin: 0px;
-            padding: 0px; 
-            li{
-                margin-bottom: 15px;
-                list-style-type: none;
-            }
-            a{
-                text-decoration: none;
+                display: inline-block;
+                width: 44.79%;
+                li{
+                    width: 100%;
+                }
             }
         }
     }

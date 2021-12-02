@@ -620,6 +620,7 @@
                 @include button;
                 transform: scale(1);
                 transition: transform 300ms;
+                font-family:"roboto";
                 &:hover{
                     transform: scale(1.15);
                     background: linear-gradient(to bottom right,lighten($secondary-color,6%),lighten($primary-color,6%));
