@@ -197,11 +197,12 @@
                 width: 100%;
                 padding: 16px 0px 13px 0px;
                 transform: translateY(-10px);
+                opacity: 0;
                 background-color: $menu-choix-background-color;
                 box-shadow: $shadow-resto;
                 border-radius: 10px;
                 margin-bottom: 16px;
-                animation: fadein 2s 600ms forwards;
+                animation: fadein 2s 100ms forwards;
                 position: relative;
                 @media screen and (min-width: 769px) {
                     width: 60%;
@@ -230,24 +231,8 @@
                             font-weight: bold;
                             margin-top: 28px;
                             margin-bottom: 0px;
-                        }
-                        @keyframes depl_prix {
-                            from {
-                                transform: translateX(0px);
-                            }
-                            to {
-                                transform: translateX(-62.8px);
-                            }
-                        }
-                        @media screen and (min-width: 1280px)  {
-                            @keyframes depl_prix {
-                                from {
-                                    transform: translateX(0px);
-                                }
-                                to {
-                                    transform: translateX(-500.8px);
-                                }
-                            }
+                            transform: translateX(0px);
+                            transition: transform 800ms ;
                         }
                         .bloc-section-menu__carte__choix__prix__info_prix{
                             display: flex;
@@ -282,7 +267,7 @@
                         animation: largeur 800ms forwards ;
                     } 
                     &:hover .bloc-section-menu__carte__choix__prix__prix {
-                        animation: depl_prix 800ms forwards ;
+                        transform: translateX(-240%);
                     } 
                 .bloc-section-menu__carte__choix_animtransl{
                     position: absolute;
@@ -320,16 +305,6 @@
                 &:hover .fas{
                     opacity: 1;
                 } 
-
-                @keyframes coullissant {
-                    from {
-                        width: 0%;
-                    }
-                    to{
-                        width: 17.2%;
-                        } 
-                    }
-        
                 @keyframes fadein {
                     from {
                         opacity: 0;
@@ -353,6 +328,7 @@
                 width: 100%;
                 padding: 16px 0px 13px 0px;
                 transform: translateY(-10px);
+                opacity: 0;
                 background-color: $menu-choix-background-color;
                 box-shadow: $shadow-resto;
                 border-radius: 10px;
@@ -386,13 +362,14 @@
                             font-weight: bold;
                             margin-top: 28px;
                             margin-bottom: 0px;
+                            
                         }
-                        @keyframes depl_prix {
+                        @keyframes deplacement_prix {
                             from {
                                 transform: translateX(0px);
                             }
                             to {
-                                transform: translateX(-62.8px);
+                                transform: translateX(-240%);
                             }
                         }
                         .bloc-section-menu__carte__choix__prix__info_prix{
@@ -431,7 +408,7 @@
                         animation: largeur 800ms forwards ;
                     } 
                     &:hover .bloc-section-menu__carte__choix__prix__prix {
-                        animation: depl_prix 800ms forwards ;
+                        animation: deplacement_prix 800ms forwards ;
                     } 
                     .bloc-section-menu__carte__choix_animtransl{
                         position: absolute;
@@ -469,25 +446,16 @@
                     &:hover .fas{
                         opacity: 1;
                     }  
-                @keyframes coullissant {
-                    from {
-                        width: 0%;
+                    @keyframes fadein {
+                        from {
+                            opacity: 0;
+                            transform: translateY(-10px);
+                        }
+                        to{
+                            opacity: 1;
+                            transform: translateY(0);
+                        } 
                     }
-                    to{
-                        width: 17.2%;
-                    } 
-                }
-        
-                @keyframes fadein {
-                    from {
-                        opacity: 0;
-                        transform: translateY(-10px);
-                    }
-                    to{
-                        opacity: 1;
-                        transform: translateY(0);
-                    } 
-                }
             }
         }
         .desserts{
@@ -500,11 +468,12 @@
                 width: 100%;
                 padding: 16px 0px 13px 0px;
                 transform: translateY(-10px);
+                opacity: 0;
                 background-color: $menu-choix-background-color;
                 box-shadow: $shadow-resto;
                 border-radius: 10px;
                 margin-bottom: 16px;
-                animation: fadein 2s 600ms forwards;
+                animation: fadein 2s 1000ms forwards;
                 position: relative;
                 @media screen and (min-width: 769px) {
                     width: 60%;
@@ -619,11 +588,12 @@
                 @keyframes coullissant {
                     from {
                         width: 0%;
+
                     }
                     to{
-                        width: 17.2%;
-                        } 
-                    }
+                        width: 17.2%;   
+                    } 
+                }
             }
         }
     }
